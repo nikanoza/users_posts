@@ -1,11 +1,15 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { Post } from "./models/post.model";
 import { User } from "./models/user.model";
 
 @Injectable({
     providedIn: 'root'
 })
 export class ServerService {
+    users: User[] = [];
+    posts: Post[] = [];
+
     constructor(private http: HttpClient){}
 
     getUsers(){
@@ -13,6 +17,18 @@ export class ServerService {
     };
 
     getPosts(){
-        return this.http.get('https://jsonplaceholder.typicode.com/posts')
+        return this.http.get<Post[]>('https://jsonplaceholder.typicode.com/posts');
+    }
+
+    updateUsers(array: User[]){
+        this.users = array;
+    }
+
+    updatePosts(array: Post[]){
+        this.posts = array;
+    }
+
+    getUser(id: number){
+        return this.users.find( user => user.id === id);
     }
 }

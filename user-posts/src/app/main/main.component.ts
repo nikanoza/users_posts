@@ -16,12 +16,6 @@ export class MainComponent implements OnInit {
   constructor(private server:ServerService) { }
 
   ngOnInit(): void {
-    this.server.getUsers().subscribe(
-      (response) => {
-        this.users = response;
-        this.fetchData = true;
-      }
-    )
+    this.users = this.server.users;
   }
-
 }

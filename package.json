@@ -1,5 +1,5 @@
 {
-  "name": "user-posts",heroku open
+  "name": "user-posts",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

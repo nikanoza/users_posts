@@ -1,5 +1,5 @@
 {
-  "name": "user-posts",
+  "name": "user-posts",heroku open
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -21,6 +21,10 @@
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
+  },
+  "engines": {
+    "node": "16.13.0",
+    "npm": "6.14.15"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.0.3",

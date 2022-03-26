@@ -1,4 +1,5 @@
 <div class="single-page" *ngIf="fetchUser">
+    <!-- output user information -->
     <div class="user box">
         <p>Name: <span>{{ user.name }}</span></p>
         <p>Username: <span>{{ user.username }}</span></p>
@@ -12,6 +13,7 @@
         <p>Catchphrase: <span>'{{ user.company.catchPhrase }}'</span></p>
     </div>
     <div class="posts box">
+        <!-- output user posts -->
         <div class="definition">User Posts</div>
         <div class="post" *ngFor="let post of posts">
             <div class="title">{{ post.title }}</div>

@@ -11,7 +11,6 @@ export class MainComponent implements OnInit {
 
   users: User[] = []; // users array
   search: string = ''; // filter pipe value
-  fetchData = false; // bool to determinate when request done
 
   constructor(private server:ServerService) { }
 

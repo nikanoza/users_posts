@@ -17,6 +17,8 @@ export class UserComponent implements OnInit {
   constructor(private route:ActivatedRoute, private server: ServerService) { }
 
   ngOnInit(): void {
+
+    //get user from resolver or router params if this page load first
     this.route.data.subscribe(
       (data: Data) => {
         if(data['user']){

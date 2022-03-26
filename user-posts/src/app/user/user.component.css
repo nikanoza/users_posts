@@ -26,8 +26,8 @@
 }
 
 .posts{
-    width: 40vw;
-    max-height: 800px;
+    width: 40%;
+    height: 800px;
     overflow-y: auto;
 }
 
@@ -54,4 +54,34 @@
 .btn-show-all a{
     text-decoration: none;
     color: #ffffff;
+}
+
+@media (max-width: 1200px){
+    .single-page{
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .posts{
+        margin-bottom: 20px;
+        width: 70%;
+    }
+}
+
+@media (max-width: 550px){
+    .box{
+        padding: 10px 15px;
+        font-size: 1.1em;
+        row-gap: 5px;
+    }    
+}
+
+@media (max-width: 400px){
+    .box{
+        padding: 2px 5px;
+        font-size: 0.7em;
+    }  
+    .posts{
+        width: 90%;
+    }
 }

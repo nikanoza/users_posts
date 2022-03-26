@@ -12,14 +12,17 @@ export class ServerService {
 
     constructor(private http: HttpClient){}
 
+    //users information request
     getUsers(){
         return this.http.get<User[]>('https://jsonplaceholder.typicode.com/users');
     };
 
+    //posts information request
     getPosts(){
         return this.http.get<Post[]>('https://jsonplaceholder.typicode.com/posts');
     }
 
+    //update information functions
     updateUsers(array: User[]){
         this.users = array;
     }
@@ -28,6 +31,7 @@ export class ServerService {
         this.posts = array;
     }
 
+    // get single user object function
     getUser(id: number){
         return this.users.find( user => user.id === id);
     }

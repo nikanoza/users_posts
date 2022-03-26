@@ -1,0 +1,13 @@
+<div class="main">
+    <!-- filter pipe -->
+    <div class="search">
+        <input type="text" id="search" [(ngModel)]="search">
+    </div>
+    <!-- output users names when user data fetch successfuly-->
+    <div class="users">
+        <!-- buttons for each user to navigate their single page -->
+        <button class="btn-user" *ngFor="let user of users | filter: search">
+            <a [routerLink]="['/users', user.id]">{{ user.name }}</a>
+        </button>
+    </div>
+</div>
